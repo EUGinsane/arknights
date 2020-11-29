@@ -18,7 +18,7 @@ export default function Home({ fileName }) {
 }
 
 export async function getServerSideProps(context) {
-  const res = await fetch("http://localhost:3000/api/hello");
+  const res = await fetch("https://arknights.hoangtrinh.dev/api/hello");
   const data = await res.json();
 
   return {
