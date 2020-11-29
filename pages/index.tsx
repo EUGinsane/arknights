@@ -10,8 +10,11 @@ export default function Home({ fileName }) {
       </Head>
 
       <main className={styles.main}>
-        <img src="https://webusstatic.yo-star.com/ark_us_web/pc/img/logo02.924e2f2a.png" />
-        <img src={`/characters/${fileName}`} style={{ width: "50vw" }} />
+        <img
+          className={styles.title}
+          src="https://webusstatic.yo-star.com/ark_us_web/pc/img/logo02.924e2f2a.png"
+        />
+        <img className={styles.character} src={`/characters/${fileName}`} />
       </main>
     </div>
   );
