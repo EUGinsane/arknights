@@ -1,6 +1,10 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import { readdirSync } from "fs";
+import { resolve } from "path";
+
+const files = readdirSync(resolve("public/characters"));
 
 export default (req, res) => {
-  res.statusCode = 200
-  res.json({ name: 'John Doe' })
-}
+  const random = Math.ceil(Math.random() * (files.length - 0) + 0);
+  res.statusCode = 200;
+  res.json({ filename: files[random] });
+};
